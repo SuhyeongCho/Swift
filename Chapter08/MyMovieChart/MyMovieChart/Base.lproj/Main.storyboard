@@ -55,9 +55,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="평점" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-7c-AG8">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="평점" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-7c-AG8">
                                             <rect key="frame" x="264" y="44" width="70" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="UTt-E9-tXV"/>
+                                                <constraint firstAttribute="height" constant="21" id="zxJ-vR-nKM"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -75,6 +78,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qbr-7c-AG8" secondAttribute="trailing" constant="41" id="4Wv-iY-XmD"/>
+                                    <constraint firstAttribute="trailing" secondItem="qbr-7c-AG8" secondAttribute="trailing" constant="41" id="bxt-O0-l2B"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="desc" destination="Wsa-RN-NW6" id="STy-Dp-eqD"/>
                                     <outlet property="opendate" destination="OR0-sp-KJs" id="VPW-Df-ivJ"/>
@@ -157,6 +164,7 @@
                                     <outlet property="addr" destination="PMs-tt-nGI" id="LTe-QY-8AK"/>
                                     <outlet property="name" destination="cJu-ra-Lhx" id="mvP-Dh-EMf"/>
                                     <outlet property="tel" destination="Op1-3I-7Tl" id="7Lg-fg-fvG"/>
+                                    <segue destination="RKh-3m-qa9" kind="show" identifier="segue_map" id="hhL-xk-WkO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -173,6 +181,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnI-GG-Kyz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1844" y="859.52023988005999"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="SSY-JB-iij">
+            <objects>
+                <viewController id="RKh-3m-qa9" customClass="TheaterViewController" customModule="MyMovieChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k6e-sh-gSf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qKB-D2-fbG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Pf1-01-jUC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="fGE-b6-lqb"/>
+                    <connections>
+                        <outlet property="map" destination="qKB-D2-fbG" id="vjg-mH-iuP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhx-WS-G6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2616.8000000000002" y="859.52023988005999"/>
         </scene>
         <!--영화관-->
         <scene sceneID="FZO-Ns-447">
@@ -252,6 +285,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wjI-G7-qN1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q2D-yU-DoL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

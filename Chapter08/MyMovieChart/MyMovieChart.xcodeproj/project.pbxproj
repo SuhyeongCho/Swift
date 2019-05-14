@@ -14,6 +14,8 @@
 		75698B0222884948004DFCA2 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75698B0122884948004DFCA2 /* ListViewController.swift */; };
 		75698B0422884A81004DFCA2 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75698B0322884A81004DFCA2 /* MovieVO.swift */; };
 		75698B062288544A004DFCA2 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75698B052288544A004DFCA2 /* MovieCell.swift */; };
+		75919D32228AFC1B00ACD7CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75919D31228AFC1B00ACD7CE /* MapKit.framework */; };
+		75919D34228AFC7200ACD7CE /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75919D33228AFC7200ACD7CE /* TheaterViewController.swift */; };
 		7595F760228999530082E2B4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595F75F228999530082E2B4 /* DetailViewController.swift */; };
 		7595F7632289A7130082E2B4 /* Trailer.png in Resources */ = {isa = PBXBuildFile; fileRef = 7595F7612289A7130082E2B4 /* Trailer.png */; };
 		7595F7642289A7130082E2B4 /* Listbullets.png in Resources */ = {isa = PBXBuildFile; fileRef = 7595F7622289A7130082E2B4 /* Listbullets.png */; };
@@ -31,6 +33,8 @@
 		75698B0122884948004DFCA2 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		75698B0322884A81004DFCA2 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 		75698B052288544A004DFCA2 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		75919D31228AFC1B00ACD7CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		75919D33228AFC7200ACD7CE /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
 		7595F75F228999530082E2B4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7595F7612289A7130082E2B4 /* Trailer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trailer.png; sourceTree = "<group>"; };
 		7595F7622289A7130082E2B4 /* Listbullets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Listbullets.png; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75919D32228AFC1B00ACD7CE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +60,7 @@
 				75698B08228855F1004DFCA2 /* Resources */,
 				75698AEE228848DE004DFCA2 /* MyMovieChart */,
 				75698AED228848DE004DFCA2 /* Products */,
+				75919D30228AFC1B00ACD7CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +77,7 @@
 			children = (
 				75698AEF228848DE004DFCA2 /* AppDelegate.swift */,
 				75698AF3228848DE004DFCA2 /* Main.storyboard */,
+				75919D33228AFC7200ACD7CE /* TheaterViewController.swift */,
 				7595F7672289A9430082E2B4 /* TheaterListController.swift */,
 				7595F7652289A8D60082E2B4 /* TheaterCell.swift */,
 				7595F75F228999530082E2B4 /* DetailViewController.swift */,
@@ -91,6 +98,14 @@
 				7595F7612289A7130082E2B4 /* Trailer.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		75919D30228AFC1B00ACD7CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75919D31228AFC1B00ACD7CE /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +140,11 @@
 				TargetAttributes = {
 					75698AEB228848DE004DFCA2 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -168,6 +188,7 @@
 			files = (
 				75698B0422884A81004DFCA2 /* MovieVO.swift in Sources */,
 				7595F7662289A8D60082E2B4 /* TheaterCell.swift in Sources */,
+				75919D34228AFC7200ACD7CE /* TheaterViewController.swift in Sources */,
 				75698AF0228848DE004DFCA2 /* AppDelegate.swift in Sources */,
 				7595F760228999530082E2B4 /* DetailViewController.swift in Sources */,
 				7595F7682289A9430082E2B4 /* TheaterListController.swift in Sources */,
